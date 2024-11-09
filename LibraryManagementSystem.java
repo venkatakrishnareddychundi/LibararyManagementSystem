@@ -70,7 +70,7 @@ public class LibraryManagementSystem {
 
 	public static void returnBook() {
 		System.out.print("Enter book title to return: ");
-		String title = scanner.nextLine();
+		String title = scanner.next();
 		Book bookToReturn = findBookByTitle(title);
 
 		if (bookToReturn != null) {
@@ -87,7 +87,7 @@ public class LibraryManagementSystem {
 
 	public static void removeBook() {
 		System.out.print("Enter book title to remove: ");
-		String title = scanner.nextLine();
+		String title = scanner.next();
 		Book bookToRemove = findBookByTitle(title);
 
 		if (bookToRemove != null) {
@@ -109,7 +109,6 @@ public class LibraryManagementSystem {
 			System.out.println("5. Exit");
 			System.out.print("Enter your choice: ");
 			int choice = scanner.nextInt();
-			scanner.nextLine(); // Consume newline
 
 			switch (choice) {
 			case 1:
@@ -134,3 +133,4 @@ public class LibraryManagementSystem {
 		}
 	}
 }
+
